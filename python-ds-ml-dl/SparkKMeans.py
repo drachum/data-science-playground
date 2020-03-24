@@ -23,6 +23,8 @@ def createClusteredData(N, k):
     X = array(X)
     return X
 
+random.seed(0)
+
 # Load the data; note I am normalizing it with scale() - very important!
 data = sc.parallelize(scale(createClusteredData(100, K)))
 
